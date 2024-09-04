@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+
+
+body, html {
+    margin: 0px !important;
+    padding: 0px !important;
+    font-family: "Poppins", sans-serif !important;
+    text-rendering: optimizeLegibility !important;
+    background: #f3f3f5;
+}
+
+
+/* html {
+    scroll-behavior: smooth;
+} */
+
+.full-navbar {
+    background-color: #ec9648;
+    padding-right: 20px;
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    padding-right: calc(var(--bs-gutter-x) * -5) !important;
+    padding-left: calc(var(--bs-gutter-x) * -5) !important;
+}
+
+.no-border {
+    border: none !important;
+}
+
+.btn-header,
+.bg-kuning {
+    background-color: #ec9648;
+}
+.no-background {
+    /* background-color: transparent !important; */
+    box-shadow: none !important;
+}
+
+.c-item {
+    height: 380px;
+    border-radius: 22px;
+}
+
+.c-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.content {
+    margin-top: 8%;
+}
+
+.pt-10 {
+    padding-top: 100px;
+}
+.mt-10 {
+    margin-top: 70px;
+}
+
+.icons-footer img {
+    width: 7.5%;
+}
+
+/* .navbar {
+    position: fixed !important;
+    z-index: 10000;
+} */
+
+.main-content {
+    margin-top: 100px !important;
+    /* height: 200px; */
+}
+.part_about {
+    background-image: url(https://media.istockphoto.com/id/1472162431/id/foto/tekstur-marmer-putih-dengan-latar-belakang-pola-alami-lantai-batu-putih.jpg?s=2048x2048&w=is&k=20&c=o0QUgD39cjeoMK8ogeCNPrbvf5A0-p9r8YySKaMKXiw=);
+}
+
+.part_about img{
+    width: 300px;
+}
+.part {
+    min-height: 600px;
+    background-color: #bfbfbf;
+}
+.part img {
+    border-radius: 12px !important;
+    /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+}
+
+.about:hover {
+    rotate: -15deg;
+    transition: rotate 1s;
+    border-radius: 12px;
+}
+
+.main-bg img {
+    border: none;
+}
+
+img {
+    border: none;
+}
+
+.main-text h1 {
+    margin-top: 150px;
+}
+
+.ungah{
+    background-image: url(/public/img/pizza-bg.png);
+}
+
+.contributors{
+    background-image: url(https://t4.ftcdn.net/jpg/05/19/75/15/360_F_519751549_tOSxZkzUvQ5D7Swdl9g2xDW6p6nUk7fh.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 1700px;
+}
+
+/* .contributors h2{
+    position: absolute;
+   padding-bottom: 200px;
+} */
+
+
+.contributors .card {
+    background: linear-gradient(145deg, #ececec, #ffffff);
+    border-radius: 20px;
+}
+
+.contributors .person1 {
+    transition: transform 0.3s ease-in-out;
+}
+
+.contributors .person1:hover {
+    transform: scale(1.1);
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.main-bg img {
+    animation: rotate 10s linear infinite;
+}
+
+
+
+
+.main-navbar {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.bg-kuning {
+    background-color: #ec9648;
+}
+
+.bg-scroll {
+    background-color: #333 !important;
+}
+
+.main-navbar.scrolled {
+    background-color: #ffffff;
+    transition: background-color 0.3s ease-in-out;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* dashboard */
+@keyframes slideInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-card {
+    opacity: 0;
+    animation: slideInFromBottom 1s ease-out forwards;
+}
+
+
+/* hp */
+@keyframes rotate3DIn {
+    0% {
+        transform: rotateY(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotateY(360deg);
+        opacity: 1;
+    }
+}
+
+.rotate-3d-animation {
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.animate-3d {
+    opacity: 1;
+    animation: rotate3DIn 2s ease-out forwards;
+}
+
+
+.ungah {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ungah img  {
+    width: 300px;
+}
+.rotate-3d-animation {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    transition: opacity 0.5s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.animate-3d {
+    opacity: 1;
+    animation: rotate3DIn 2s ease-out forwards;
+}
+
+@keyframes rotate3DIn {
+    0% {
+        transform: rotateY(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotateY(360deg);
+        opacity: 1;
+    }
+}
+
+
