@@ -16,6 +16,8 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 |
 */
 
-Route::get('/', [DashboardController::class,  'index'])->name('posts.dashbaord');
+Route::get('/', [DashboardController::class,  'index'])->name('posts.landingpage');
+Route::get('/dashboard', [DashboardController::class,  'dashboard'])->name('posts.dashboard');
 Route::get('/login', [LoginController::class, 'login'])->name('posts.login');
 Route::get('/register', [LoginController::class, 'register'])->name('posts.register');
+Route::get('/resep', [DashboardController::class, 'resep'])->name('posts.resep');
