@@ -1,0 +1,60 @@
+.sidebar {
+    /* top: 0; */
+    height: 100vh;
+    margin-top: 5vh !important;
+    position: fixed;
+    transition: transform 0.3s ease;
+    background-color: white;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
+    z-index: 999;
+}
+
+a {
+    list-style-type: none !important;
+    text-decoration: none !important;
+}
+
+
+/* body{
+    margin-top: -100px !important;
+} */
+/* Perbaiki media query */
+@media screen and (max-width: 763px) {
+    .sidebar {
+        margin-top: 13% !important;
+        width: 300px !important;
+        height: 100vh;
+    }
+
+    .navbar {
+        /* margin-left: 1.2% !important; */
+        width: 122% !important;
+    }
+    .navbar input {
+        width: 70vw !important;
+        height: 4.5vh !important;
+        border-radius: 8px;
+    }
+}
+
+.sidebar.transform {
+    transform: translateX(-300px);
+}
+
+.navbar {
+    width: 1539px !important;
+    background-color: #ec9648;
+    z-index: 1000;
+    top: 30;
+    position: fixed !important;
+    display: block;
+    margin: auto !important;
+    top: 0;
+    /* padding: 100px !important; */
+}
+
+.navbar input {
+    width: 50vw !important;
+    height: 5vh !important;
+    border-radius: 8px;
+}

@@ -1,0 +1,79 @@
+body {
+    overflow-x: scroll !important;
+    max-width: 1519px !important;
+    margin: 0 auto !important;
+    text-align: justify !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+}
+
+p, h1 {
+    color: black !important;
+}
+
+.Judul {
+    margin: auto !important;
+    margin-left: 8% !important;
+}
+
+.Step {
+    width: 1519px !important;
+    height: 300px;
+    margin-left: 8% !important;
+}
+
+.isi  .left {
+    width: 50px;
+    justify-content: center !important;
+}
+
+.bahan {
+    height: 300px;
+    max-width: 1519px !important;
+}
+
+.bahan .lefft{
+    width: 20px !important;
+}
+.bahan .left{
+    border-left: 1px solid black;
+    padding-left: 20px;
+}
+/*  */
+.main-content {
+    margin-top: 100px !important;
+    z-index: 88;
+    width: 100vw !important;
+    margin: auto;
+    /* margin-left: 5% !important; */
+}
+
+.main-content .deks{
+    height: 80px;
+}
+.main-content .left img {
+    width: 25vw;
+    border-radius: 8px;
+}
+.main-content .action{
+
+    width: 20vw;
+    border-bottom: 1px solid #ec9648;
+    padding-bottom: 5px;
+}
+.main-content .action span{
+    border:  1px solid #ec9648;
+    border-radius: 8px;
+    padding: 2px;
+    text-align: center;
+    align-items: center;
+}
+.main-content .action span{
+    color: #ec9648 ;
+}
+
+
+.main-content .sosial{
+    width: 20vw;
+    padding-top: 5px;
+}

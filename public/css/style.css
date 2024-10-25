@@ -1,24 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
-
-
-body, html {
+body,
+html {
     margin: 0px !important;
     padding: 0px !important;
     font-family: "Poppins", sans-serif !important;
     text-rendering: optimizeLegibility !important;
     background: #f3f3f5;
+    background-size: cover !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
 }
 
-
-/* html {
-    scroll-behavior: smooth;
-} */
-
-.full-navbar {
-    background-color: #ec9648;
-    padding-right: 20px;
-}
 
 .container,
 .container-fluid,
@@ -39,21 +32,8 @@ body, html {
 .bg-kuning {
     background-color: #ec9648;
 }
-.no-background {
-    /* background-color: transparent !important; */
-    box-shadow: none !important;
-}
 
-.c-item {
-    height: 380px;
-    border-radius: 22px;
-}
 
-.c-img {
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.6);
-}
 
 .content {
     margin-top: 8%;
@@ -70,29 +50,41 @@ body, html {
     width: 7.5%;
 }
 
-/* .navbar {
-    position: fixed !important;
-    z-index: 10000;
-} */
+
 
 .main-content {
+    width: 100% !important;
     margin-top: 100px !important;
-    /* height: 200px; */
 }
 .part_about {
-    background-image: url(https://media.istockphoto.com/id/1472162431/id/foto/tekstur-marmer-putih-dengan-latar-belakang-pola-alami-lantai-batu-putih.jpg?s=2048x2048&w=is&k=20&c=o0QUgD39cjeoMK8ogeCNPrbvf5A0-p9r8YySKaMKXiw=);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    height: 950px;
+    width: 100% !important;
+    background-image: url("/img/abut_img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.part_about img{
-    width: 300px;
+.part_about img {
+    margin-left: 10%;
+    width: 80%;
 }
 .part {
+    width: 100% !important;
     min-height: 600px;
     background-color: #bfbfbf;
 }
+.part h1,
+.part p {
+    text-align: center;
+}
+.part h1 {
+    height: 100px !important;
+}
+
 .part img {
     border-radius: 12px !important;
-    /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
 }
 
 .about:hover {
@@ -102,6 +94,7 @@ body, html {
 }
 
 .main-bg img {
+    margin-top: 100px !important;
     border: none;
 }
 
@@ -113,37 +106,76 @@ img {
     margin-top: 150px;
 }
 
-.ungah{
+.ungah {
+    height: 1000px;
     background-image: url(/public/img/pizza-bg.png);
 }
-
-.contributors{
+.contributors {
     background-image: url(https://t4.ftcdn.net/jpg/05/19/75/15/360_F_519751549_tOSxZkzUvQ5D7Swdl9g2xDW6p6nUk7fh.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 1700px;
 }
+.main-img img{
+    width: 13vw !important;
+    transform: translateX(-80px);
+}
 
-/* .contributors h2{
-    position: absolute;
-   padding-bottom: 200px;
-} */
+.Menu{
+    margin-top: 100px !important;
+    max-width: 1219px !important;
+    margin-left: 10% !important;
+    /* border: 1px solid grey; */
+    text-align: center !important;
+    display: flex;
+    box-sizing: border-box !important;
+    flex-wrap: wrap;
+    margin: auto !important;
 
 
-.contributors .card {
+}
+
+.card-menu {
+    width: 250px !important;
+    height: 400px;
+    border: 1px solid grey;
+    text-align: center;
+    margin: auto !important;
+    display: flex;
+    flex-direction: column;
+    gap: 20px !important;
+    border-radius: 8px;
+    margin-top: 100px !important;
     background: linear-gradient(145deg, #ececec, #ffffff);
-    border-radius: 20px;
+
 }
 
-.contributors .person1 {
-    transition: transform 0.3s ease-in-out;
+.Menu img {
+    width: 70% !important;
+    position: static;
+    transform: translateX( 2px);
+    margin-top: -20% !important;
 }
-
-.contributors .person1:hover {
-    transform: scale(1.1);
+.card-title {
+    display: flex;
+    justify-content: center; 
+    padding: 10px !important;
+    height: 50px;
 }
-
+.kalori{
+    padding: 20px !important;
+    height: 20px;
+}
+.jenis {
+    padding-top: 20px !important;
+    height: 100px;
+    display: flex;
+}
+.love {
+    height: 100px;
+    display: flex;
+}
 
 @keyframes rotate {
     from {
@@ -158,20 +190,10 @@ img {
     animation: rotate 10s linear infinite;
 }
 
-
-
-
 .main-navbar {
     transition: background-color 0.3s ease-in-out;
 }
 
-.bg-kuning {
-    background-color: #ec9648;
-}
-
-.bg-scroll {
-    background-color: #333 !important;
-}
 
 .main-navbar.scrolled {
     background-color: #ffffff;
@@ -179,23 +201,6 @@ img {
     color: black;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* dashboard */
 @keyframes slideInFromBottom {
     0% {
         opacity: 0;
@@ -211,7 +216,6 @@ img {
     opacity: 0;
     animation: slideInFromBottom 1s ease-out forwards;
 }
-
 
 /* hp */
 @keyframes rotate3DIn {
@@ -235,13 +239,12 @@ img {
     animation: rotate3DIn 2s ease-out forwards;
 }
 
-
 .ungah {
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.ungah img  {
+.ungah img {
     width: 300px;
 }
 .rotate-3d-animation {
@@ -268,4 +271,54 @@ img {
     }
 }
 
+@media screen and (min-width: 768px) {
+    .none {
+        display: none !important;
+    }
+}
 
+@media screen and (max-width: 768px) {
+    .hilang {
+        display: none !important;
+    }
+
+    .contributors {
+        display: flex !important;
+        box-sizing: border-box;
+    }
+    .card-body h2 {
+        font-size: 16px;
+        height: 50px !important;
+        gap: 0;
+    }
+    .ungah {
+        height: auto !important;
+    }
+    .ungah p {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+    .ungah img {
+        width: 200px;
+    }
+
+    .navbar {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+    }
+    .main-bg img {
+        width: 70%;
+        margin-left: 50px;
+        margin-top: 0 !important;
+    }
+
+    .main-text h1 {
+        margin-top: 250px !important;
+    }
+    footer .flex-column {
+        display: flex !important;
+        flex-direction: row !important;
+    }
+}

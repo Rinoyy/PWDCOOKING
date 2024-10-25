@@ -6,6 +6,9 @@
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
      <title>Document</title>
+
+     {{-- Menggunakan section untuk memuat CSS yang spesifik untuk tiap halaman --}}
+     @yield('styles')
 </head>
 <body>
      <div class="container-fluid bg-light.bg-gradient">
@@ -13,16 +16,5 @@
           @yield('content')
           @include('layout.app.footer')
      </div>
-
-     
-
 </body>
 </html>
-
-
-
-
-
-
-
-
