@@ -29,7 +29,7 @@
 
 <div class="login-container col-md-4">
     <h2>Login</h2>
-    <form action="{{ Route('login') }}" method="POST">
+    <form action="{{ Route('tampil') }}" method="POST">
         @csrf
         <!-- Email -->
         <div class="mb-3">

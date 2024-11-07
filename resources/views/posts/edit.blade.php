@@ -31,8 +31,9 @@
 <div class="container">
     <div class="form-container">
         <h2 class="form-title">Form Resep Lengkap</h2>
-        <form action="{{ route("storeSep") }}" method="POST">
+        <form action="{{ route('update', ['id_resep' => $edit->id_resep]) }}" method="POST">
             @csrf
+            @method('PUT')
             <!-- ID Resep -->
             {{-- <div class="mb-3">
                 <label for="idResep" class="form-label">ID Resep</label>

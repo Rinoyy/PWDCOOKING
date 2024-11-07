@@ -48,20 +48,28 @@
                     <div class="kalori">
                         120
                     </div>
-                    <div class="jenis">
+                    <div class="jenis d-flex justify-content-around">
                         <div class="left">
-                            Lorem, ipsum dolor.
+                            <p>{{ $item->waktu }}</p>
                         </div>
                         <div class="rig">
-                            Lorem, ipsum dolor.
+                        <p>Mudah</p>
                         </div>
                     </div>
-                    <div class="love">
+                    <div class="love d-flex justify-content-around">
                         <div class="left">
-                            Lorem, ipsum dolor.
+                            {{-- <form action="{{ route('simpanFavorit', ['id_resep' => $item->id_resep]) }}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-link"> --}}
+                                    <form id="favoritForm" action="{{ route('posts.favorit', ['id_resep' => $item->id_resep]) }}" method="POST">
+                                        @csrf
+                                        <button type="submit">Simpan Resep</button>
+                                    </form>
+                                    
+                                    
                         </div>
                         <div class="rig">
-                            <a href="{{ route('create.view', ['Id_resep' => $item->Id_resep]) }}">Detail</a>
+                            <a href="{{ route('create.view', ['id_resep' => $item->id_resep]) }}">Detail</a>
                         </div>
                     
                     </div>

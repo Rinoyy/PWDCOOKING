@@ -6,20 +6,25 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 
+
 class LoginController extends Controller
 {
+    protected $redirectTo = '/tampilLogin';
 
-    public function tampil(){
+
+    public function proses()
+    {
         return view('login.login');
     }
-    public function proses(Request $request)
+
+
+    public function tampil(Request $request)
     {
-        // Validasi input
         $request->validate([
-            'email' => 'required|email',
+            // 'email' => 'required|email',
             'password' => 'required'
         ]);
-    
+
         if (Auth::attempt([
             'email' => $request->email,
             'password' => $request->password
@@ -27,14 +32,21 @@ class LoginController extends Controller
             return redirect()->intended('dashboard');
         } else {
             return back()->withErrors([
-                'email' => 'Email atau password salah.',
+                'ematextil' => 'Email atau password salah.',
             ])->withInput();
         }
     }
-    
+
 
     public function register()
     {
         return view('login.register');
+    }
+
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        return view('posts.landingpage');
     }
 }

@@ -8,10 +8,10 @@
      <title>Document</title>
 
      {{-- Menggunakan section untuk memuat CSS yang spesifik untuk tiap halaman --}}
-     @yield('styles')
+     {{-- @yield('styles') --}}
 </head>
 <body>
-     <div class="container-fluid bg-light.bg-gradient">
+     <div class="">
           @include('layout.app.navbar')
           @yield('content')
           @include('layout.app.footer')

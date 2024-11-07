@@ -37,7 +37,11 @@
             <div class="side-list d-flex flex-column gap-5 pt-5">
                 <div>
                     <i class="bi bi-heart-fill" style="color: orange"></i>
-                    <a href="{{ route('posts.favorit') }}">Favorite</a>
+                    <a href="{{ route('dashboard') }}">Dashboard</a>
+                </div>
+                <div>
+                    <i class="bi bi-heart-fill" style="color: orange"></i>
+                    <a href="{{ route('posts.Viewfavorit') }}">Favorite</a>
                 </div>
                 <div>
                     <i class="bi bi-book-half" style="color: orange"></i>
@@ -53,7 +57,11 @@
                 <div>
                     <i class="bi bi-person-circle" style="color: orange"></i>
 
-                    <a href="">Favorite</a>
+                    <a href="{{ route('posts.akun') }}">Akun</a>
+                </div>
+                <div>
+                    <i class="bi bi-person-circle" style="color: orange"></i>
+                    <a href="{{ route('logout') }}">Sign Out</a>
                 </div>
             </div>
         </div>

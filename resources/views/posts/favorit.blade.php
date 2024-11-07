@@ -1,21 +1,25 @@
-@extends('layout.app')
+<h1>Resep yang Disimpan</h1>
 
+<!-- Menampilkan flash message -->
+@if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
 
+@if (session('info'))
+    <div class="alert alert-info">
+        {{ session('info') }}
+    </div>
+@endif
 
-    
-    @push('styles')
-        
-    <link rel="stylesheet" href="{{ asset('css/favorit.css') }}">
-    @endpush
-
-
-@section('content')   
-    <style></style>
-    <div class="main-content">
-        <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-            <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis odit vero nisi nemo debitis similique odio quaerat perspiciatis perferendis! Quam, aliquam! Aut animi omnis dolores explicabo eligendi autem quam officia?
+<!-- Menampilkan daftar card untuk resep yang disimpan -->
+@foreach ($simpans as $simpan)
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">{{ $simpan->resep->judul }}</h5>
+            <p class="card-text">{{ $simpan->resep->deskripsi }}</p>
+            <a href="{{ route('posts.detail', $simpan->resep->id_resep) }}" class="btn btn-primary">Lihat Detail</a>
         </div>
     </div>
-@endsection
+@endforeach

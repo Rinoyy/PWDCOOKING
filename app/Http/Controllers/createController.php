@@ -34,27 +34,23 @@ class createController extends Controller
     public function store(Request $request)
     {
 
+        $cara_membuat = implode('|', $request->input('cara_membuat'));
+        $isi_bahan_bahan = implode('|', $request->input('isi_bahan_bahan'));
 
-
-        $data_isi = implode('|', $request->input('isi_1'));
-
-
-        $data = DB::table('resep')->insert([
+        $data = DB::table('Resep')->insert([
             "judul" => $request->input('judul'),
-            "desripsi_1" => $request->input('deskripsi_1'),
-            "id_level" => $request->input('id_level'),
+            "deksripsi" => $request->input('deksripsi'),
+            "Level" => $request->input('Level'),
             "waktu" => $request->input('waktu'),
-            "desripsi_2" => $request->input('deskripsi_2'),
-            "sub_judul" => $request->input('sub_judul'),
-            "desripsi_3" => $request->input('deskripsi_3'),
-            "isi_1" => $data_isi,
-            "judul_bahan" => $request->input('judul_bahan'),
-            "isi_bahan" => $request->input('isi_bahan'),
-            "judul_cara" => $request->input('judul_cara'),
-            "isi_cara" => $request->file('img'),
-            "img" => $request->input('judul'),
-            "id_kategori" => $request->input('id_kategori')
+            "Sub_judul" => $request->input('Sub_judul'),
+            "isi_bahan_bahan" => $isi_bahan_bahan,
+            "cara_membuat" => $cara_membuat,
+            // "img" => null
+            "id_kategori" => $request->input('id_kategori'),
         ]);
+
+
+      
 
         return redirect()->route('dashboard');
     }
@@ -63,17 +59,25 @@ class createController extends Controller
      * Display the specified resource.
      */
     // public function show(string $id)
-    public function show($Id_resep)
+    public function show($id_resep)
     {
-        $data = DB::table('resep')->where('id_resep', $Id_resep)->first();
+        $data = DB::table('resep')->where('id_resep', $id_resep)->first();
         
-        if ($data->isi_1) {
-            $pecah = explode('|', $data->isi_1);
+        if ($data->isi_bahan_bahan) {
+            $pecah = explode('|', $data->isi_bahan_bahan);
         } 
     
+        if ($data->cara_membuat) {
+            $cara_membuat = explode('|', $data->cara_membuat);
+        } 
+        if ($data->	isi_bahan_bahan) {
+            $isi_bahan_bahan = explode('|', $data->	isi_bahan_bahan);
+        } 
         return view('posts.view', [
             'data' => $data,
             'pecah' => $pecah,
+            'cara_membuat' => $cara_membuat,
+            'isi_bahan_bahan' => $isi_bahan_bahan
         ]);
     }
     
