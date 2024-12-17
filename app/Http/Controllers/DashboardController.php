@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
+
     public function index()
     {
         return view('posts.landingpage');
@@ -15,7 +16,7 @@ class DashboardController extends Controller
 
     public function dashboard(Request $request)
     {
-        $data = DB::table('resep')->get();
+        $data = DB::table('resep')->limit(4)->get();
 
         return view('posts.dashboard', [
             'data' => $data

@@ -14,6 +14,7 @@
      <div class="">
           @include('layout.app.navbar')
           @yield('content')
+          @yield('scripts')
           @include('layout.app.footer')
      </div>
 </body>

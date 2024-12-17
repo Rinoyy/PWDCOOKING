@@ -35,36 +35,36 @@ Route::post('/tampilLogin', [LoginController::class, 'tampil'])->name('tampil');
 
 
 
-Route::middleware('auth')->group(function () {
 
-    Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
-
-
-    Route::get('/dashboard', [DashboardController::class,  'dashboard'])->name('dashboard');
-
-    // RICIPE CONTROLLER
-    Route::get('/resep', [ricipeController::class, 'resep'])->name('posts.resep');
-    Route::get('/Viewfavorit', [SimpanController::class, 'index'])->name('posts.Viewfavorit');
-    Route::post('/favorit/{id_resep}', [SimpanController::class, 'simpanResep'])->name('posts.favorit');
-    Route::get('/detail/{id_resep}', [SimpanController::class, 'detailResep'])->name('posts.detail');
-    // Route::post('/simpan-resep/{id_resep}', [SimpanController::class, 'favorit'])->name('posts.favorit');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
-    Route::get('/akun', [favoritController::class, 'akun'])->name('posts.akun');
-    Route::post('/hapus/{id_resep}', [favoritController::class, 'hapus'])->name('hapus');
-    Route::get('/edit/{id_resep}', [favoritController::class, 'edit'])->name('edit');
-    Route::put('/update/{id_resep}', [favoritController::class, 'update'])->name('update');
-    // Route::post('/update', [favoritController::class, 'update'])->name('update');
+Route::get('/dashboard', [DashboardController::class,  'dashboard'])->name('dashboard');
 
-    // CREATE CONTROLLER
-    Route::get('view/{id_resep}', [createController::class, 'show'])->name('create.view');
-    Route::get('create', [createController::class, 'create'])->name('create.create');
-    Route::post('storeSep', [createController::class, 'store'])->name('storeSep');
-    Route::post('index', [createController::class, 'index'])->name('index');
 
-    Route::post('/simpan/{id_resep}', [SimpanController::class, 'simpanResep'])->name('simpanResep');
-    Route::get('/simpan', [SimpanController::class, 'index'])->name('simpan.index');
-});
+// RICIPE CONTROLLER
+Route::get('/resep', [ricipeController::class, 'resep'])->name('posts.resep');
+Route::get('/Viewfavorit', [SimpanController::class, 'index'])->name('posts.Viewfavorit');
+Route::post('/favorit/{id_resep}', [SimpanController::class, 'simpanResep'])->name('posts.favorit');
+Route::get('/detail/{id_resep}', [SimpanController::class, 'detailResep'])->name('posts.detail');
+// Route::post('/simpan-resep/{id_resep}', [SimpanController::class, 'favorit'])->name('posts.favorit');
+
+
+Route::get('/akun', [favoritController::class, 'akun'])->name('posts.akun');
+Route::post('/hapus/{id_resep}', [favoritController::class, 'hapus'])->name('hapus');
+Route::get('/edit/{id_resep}', [favoritController::class, 'edit'])->name('edit');
+Route::put('/update/{id_resep}', [favoritController::class, 'update'])->name('update');
+// Route::post('/update', [favoritController::class, 'update'])->name('update');
+
+// CREATE CONTROLLER
+Route::get('view/{id_resep}', [createController::class, 'show'])->name('create.view');
+Route::get('create', [createController::class, 'create'])->name('create.create');
+Route::post('storeSep', [createController::class, 'store'])->name('storeSep');
+Route::post('index', [createController::class, 'index'])->name('index');
+
+Route::post('/simpan/{id_resep}', [SimpanController::class, 'simpanResep'])->name('simpanResep');
+Route::get('/simpan', [SimpanController::class, 'index'])->name('simpan.index');
+
 
 // REGISTER CONTROLLER  
 Route::get('registerREG', [registerController::class, 'register'])->name('register');

@@ -117,7 +117,66 @@
     </div>
 </div>
 
-<script src="{{ asset('js/create.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+    let inputCount = 1;
+    let inputCount_isi_bahan = 1;
+
+    $("#plus").click(function (e) {
+        e.preventDefault();
+        inputCount++;
+        const newInputDiv = `
+            <div class="mb-3" id="input-${inputCount}">
+                <label for="isi1-${inputCount}" class="form-label">Isi ${inputCount}</label>
+                <input class="form-control" id="isi1-${inputCount}" name="isi_bahan_bahan[]" rows="3" />
+                <button type="button" class="btn btn-danger btn-sm remove-input" data-id="${inputCount}">Remove</button>
+            </div>
+        `;
+        $("#additional-inputs").append(newInputDiv);
+    });
+
+    $("#minus").click(function (e) {
+        e.preventDefault();
+        $("#additional-inputs input").each(function () {
+            if ($(this).val().trim() === "") {
+                $(this).parent().remove();
+            }
+        });
+    });
+
+
+
+
+    $("#plus_isi_bahan").click(function (e) {
+        e.preventDefault();
+        inputCount_isi_bahan++;
+        const newDivIsiBahan = `
+            <div class="mb-3" id="input-bahan-${inputCount_isi_bahan}">
+                <label for="isiBahan-${inputCount_isi_bahan}" class="form-label">Isi ${inputCount_isi_bahan}</label>
+                <input class="form-control" id="isiBahan-${inputCount_isi_bahan}" name="cara_membuat[]" rows="3" />
+                <button type="button" class="btn btn-danger btn-sm remove-input" data-id="${inputCount_isi_bahan}">Remove</button>
+            </div>
+        `;
+        $("#isi_bahan_tampung").append(newDivIsiBahan);
+    });
+
+
+    $("#minus_isi_bahan").click(function (e) {
+        e.preventDefault();
+        $("#isi_bahan_tampung input").each(function () {
+            if ($(this).val().trim() === "") {
+                $(this).parent().remove();
+            }
+        });
+    });
+
+    $(document).on("click", ".remove-input", function () {
+        $(this).parent().remove();
+    });
+});
+
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
